@@ -58,7 +58,7 @@ public class RondaTest {
 
         assertEquals(ronda2.getPuntajeAcumulado(), 2);
 
-        //a verga
+        //a verga (calate esta)
         //que cantidad innecesaria de tiempo llevo esto
     }
 }
