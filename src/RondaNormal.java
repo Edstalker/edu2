@@ -2,10 +2,8 @@
  * Created by Geral on 04/11/2016.
  */
 public class RondaNormal extends Ronda {
-    @Override
-    public int cantidadDeTirosPosibles() {
-        return 2;
-    }
+
+    public RondaNormal(){this.tirosPosibles = 2;}
 
     @Override
     public void registrarTiro(int pinosTirados) {
@@ -14,4 +12,10 @@ public class RondaNormal extends Ronda {
             this.tirosRealizados++;
         }
     }
+
+    @Override
+    public boolean yaTermine() {
+        return  tirosRealizados==cantidadDeTirosPosibles() || this.puntajeAcumulado==10;
+    }
+
 }

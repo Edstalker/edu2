@@ -4,12 +4,20 @@
 public abstract class Ronda {
     protected int puntajeAcumulado;
     public int tirosRealizados;
+    protected int tirosPosibles;
 
-    public abstract int cantidadDeTirosPosibles();
 
-    public int getPuntajeAcumulado() {
+    public int cantidadDeTirosPosibles() {
+        return tirosPosibles;
+    }
+
+    public int getPuntajeRonda() {
         return puntajeAcumulado;
     }
 
+
     public abstract void registrarTiro(int pinosTirados);
+
+
+    public abstract boolean yaTermine();
 }
