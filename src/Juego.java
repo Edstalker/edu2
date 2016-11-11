@@ -14,9 +14,9 @@ public class Juego {
         //rondaActual = new RondaNormal();
         //contadorDeRonda = 1;
         listaDeRondas = new LinkedList<Ronda>();
-        for(int i = 0; i < 10; i++)
+        for(int i = 0; i < 9; i++)
             listaDeRondas.add(new RondaNormal());
-
+        listaDeRondas.add(new UltimaRonda());
         rondaActual = listaDeRondas.getFirst();
     }
 
@@ -32,7 +32,8 @@ public class Juego {
     }
 
     public boolean juegoTerminado() {
-        return false;
+        return listaDeRondas.getLast().yaTermine();
+
     }
 
     public int currentRondaNumber() {

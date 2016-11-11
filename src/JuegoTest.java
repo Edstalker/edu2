@@ -49,6 +49,16 @@ public class JuegoTest {
             nuevoJuego.tiraronPinos(1);
 
         assertEquals(20,nuevoJuego.getPuntaje());
-        //assertTrue(nuevoJuego.juegoTerminado());
+        assertTrue(nuevoJuego.juegoTerminado());
     }
+    @Test
+    public void juegoPerfect(){
+        Juego nuevoJuego = new Juego();
+        for(int i = 0; i<12; i++)
+            nuevoJuego.tiraronPinos(10);
+
+        assertEquals(120,nuevoJuego.getPuntaje());
+        assertTrue(nuevoJuego.juegoTerminado());
+    }
+    
 }
