@@ -60,5 +60,5 @@ public class JuegoTest {
         assertEquals(120,nuevoJuego.getPuntaje());
         assertTrue(nuevoJuego.juegoTerminado());
     }
-    
+
 }

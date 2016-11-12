@@ -20,4 +20,12 @@ public abstract class Ronda {
 
 
     public abstract boolean yaTermine();
+
+    public boolean soyStrike() {
+        return tirosRealizados != cantidadDeTirosPosibles() && this.puntajeAcumulado==10;
+    }
+
+    public boolean soySplit() {
+            return tirosRealizados == cantidadDeTirosPosibles() && this.puntajeAcumulado==10;
+    }
 }
