@@ -82,14 +82,24 @@ public class RondaTest {
     }
 
     @Test
-    public void rondaNormalTerminada() {
+    public void rondaNormalTerminadaPorpuntos() {
         RondaNormal ronda = new RondaNormal();
         assertEquals(false, ronda.yaTermine());
         ronda.registrarTiro(10);
         assertEquals(true, ronda.yaTermine());
+        assertTrue(ronda.soyStrike());
+        assertFalse(ronda.soySplit());
+    }
+    @Test
+    public void rondaNormalTerminadaPorTiros(){
+        RondaNormal ronda = new RondaNormal();
+        ronda.registrarTiro(5);
+        ronda.registrarTiro(5);
+        assertTrue(ronda.yaTermine());
+        assertFalse(ronda.soyStrike());
+        assertTrue(ronda.soySplit());
 
     }
-
     @Test
     public void ultimaRondaTerminadaPorTiros() {
         UltimaRonda ronda = new UltimaRonda();
